@@ -51,6 +51,9 @@ class MainActivity3 : AppCompatActivity() {
         intent.putExtra("name", friend.name )
         intent.putExtra("phone", friend.phone)
         intent.putExtra("favorite", friend.isFavorite)
+        intent.putExtra("address", friend.address)
+        intent.putExtra("email", friend.email)
+        intent.putExtra("website", friend.webSite)
         startActivity(intent)
 
     }

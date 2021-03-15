@@ -13,12 +13,11 @@
       android:text="Detail View"
       android:layout_gravity="center"
       android:textSize="35dp"/>
-
   <GridLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:columnCount="2"
-      android:rowCount="3"
+      android:rowCount="5"
       android:orientation="horizontal">
 
     <TextView
@@ -38,31 +37,106 @@
         android:layout_height="wrap_content"
         android:text="Phone:"
         android:layout_gravity="right"/>
+    <RelativeLayout>
     <EditText
         android:id="@+id/tvPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="12345678"
         android:gravity="right"/>
+    <ImageButton
+        android:id="@+id/icon_sms"
+        android:layout_toRightOf="@id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/email_icon"
+        android:onClick="onClickOpenSMS"
+      />
+      <ImageButton
+          android:id="@+id/icon_phone"
+          android:layout_toRightOf="@id/icon_sms"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/icon_phone"
+          android:onClick="onClickOpenCall"
+          />
+    </RelativeLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:layout_gravity="right"/>
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12345678"
+        android:gravity="right"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:layout_gravity="right"/>
+    <RelativeLayout>
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12345678"
+        android:gravity="right"/>
+      <ImageButton
+          android:id="@+id/btnEmail"
+          android:layout_toRightOf="@id/etEmail"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/send_icon"
+          android:onClick="onClickOpenEmail"
+          />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website:"
+        android:layout_gravity="right"/>
+    <RelativeLayout>
+    <EditText
+        android:id="@+id/etWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12345678"
+        android:gravity="right"/>
+      <ImageButton
+          android:id="@+id/btnWebsite"
+          android:layout_toRightOf="@id/etWebsite"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/web_icon"
+          android:onClick="onClickOpenWebsite"
+          />
+    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Favorite:"
         android:gravity="right"/>
-    <ImageView
-        android:id="@+id/imgFavorite"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/ok"
-        android:scaleType="fitCenter"/>
-    <CheckBox
-        android:id="@+id/check_favourite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Favourite?" />
+    <RelativeLayout>
+      <ImageView
+          android:id="@+id/imgFavorite"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:src="@drawable/ok"
+          android:scaleType="fitCenter"/>
 
+      <CheckBox
+          android:id="@+id/check_favourite"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_toRightOf="@id/imgFavorite"
+          android:paddingTop="20px"
+          android:text="Favourite?" />
+    </RelativeLayout>
   </GridLayout>
   <RelativeLayout
       android:layout_width="wrap_content"
